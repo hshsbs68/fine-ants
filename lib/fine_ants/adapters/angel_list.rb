@@ -38,13 +38,13 @@ module FineAnts
 
         invested = find('.results .s-grid0 div:nth-child(2) .acumin-pro').text
 
-        {
+        [{
           adapter: :angel_list,
           user: @user,
           id: @user,
           name: "Investments",
           amount: invested.scan(/[.0-9]/).join().to_f,
-        }
+        }]
       end
 
       private
